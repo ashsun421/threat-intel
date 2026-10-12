@@ -8,7 +8,9 @@ def generate_report(alert_json: dict) -> str:
         "You are a SOC analyst. Write a short incident report with these sections: "
         "Summary, Affected Hosts, Severity, Recommended Action. "
         "Use ONLY facts present in the alert JSON below. If something is not in the "
-        "data, write 'not available' instead of guessing.\n"
+        "data, write 'not available' instead of guessing. "
+        "Suricata severity scale: 1 = High, 2 = Medium, 3 = Low. "
+        "Do not infer anything about the attacker's identity or intent.\n"
         f"{alert_json}"
     )
     r = httpx.post(
