@@ -38,3 +38,4 @@ echo '{"timestamp":"2026-10-12T12:00:00.000000+0000","event_type":"alert","src_i
 - Never commit `.env` or any token or password.
 - Work on a branch, open a pull request, and wait for CI to pass before merging to `main`.
 - Database changes: edit `backend/app/models.py`, run `alembic revision --autogenerate -m "message"`, read the generated file, then commit the model and migration together. Tell the team before generating one, so two people don't create competing migrations. Never edit a migration that's already pushed.
+
